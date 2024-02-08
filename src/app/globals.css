@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.figure-hero {
+  flex: 0.5;
+  height: 550px;
+  border-radius: 41% 59% 71% 29% / 40% 30% 70% 60%;
+}
+
+.main-page-section {
+  @apply py-8 px-6 w-full max-w-screen-lg
+}
+
+.li-decoration-navbar {
+  @apply underline decoration-2 hover:decoration-primary decoration-transparent cursor-pointer transition hover:text-gray-1 text-gray-1/75
+}
+
+.bento-grid-child {
+  @apply w-full min-h-[180px] flex flex-col justify-center gap-2 cursor-pointer hover:border-primary/75 transition-colors
+}
+
+@layer utilities {
+  .css-invert {
+    @apply invert-[50%] brightness-200;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #e8e8e8ff;
+    border-radius: 2rem;
+    cursor: pointer;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #999999ff;
+    border-radius: 2rem;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    cursor: grabbing;
+  }
+}
