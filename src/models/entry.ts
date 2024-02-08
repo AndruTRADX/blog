@@ -5,7 +5,7 @@ interface EntryDocument extends Document {
   id: string;
   type: "course" | "blog" | string;
   title: string;
-  content: string;
+  content: any;
   date: Date;
   topics: Schema.Types.ObjectId[];
   author: Schema.Types.ObjectId;
@@ -14,7 +14,7 @@ interface EntryDocument extends Document {
 const entrySchema = new Schema<EntryDocument, {}>({
   type: { type: String, enum: ["course", "blog"], default: "blog" },
   title: { type: String, required: true },
-  content: {},
+  content: { required: true },
   date: { type: Date, required: true, default: Date.now },
   topics: { type: [Schema.Types.ObjectId], required: true, ref: "User" },
   author: { type: Schema.Types.ObjectId, required: true, ref: "User" },

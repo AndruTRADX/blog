@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 import {
   signIn,
@@ -14,6 +13,7 @@ import {
 
 import { BookOpenIcon } from "@heroicons/react/24/outline";
 import { BuiltInProviderType } from "next-auth/providers/index";
+import Button from "./button/Button";
 
 const Navbar = () => {
   const { data: session } = useSession();
@@ -63,37 +63,20 @@ const Navbar = () => {
 
         {session?.user ? (
           <div className="flex items-center gap-x-2">
-            <Image
-              src={session?.user?.image as string}
-              alt="user"
-              width={36}
-              height={36}
-              className="rounded-full"
-            />
-
-            <button
-              onClick={() => {
-                signOut();
-              }}
-              className="bg-primary hover:bg-primary-hover px-5 py-2 rounded-2xl text-light text-sm font-semibold transition-colors"
-            >
-              Sign Out
-            </button>
+            <Button text="Add entry" />
+            <Button text="Sign out" outline onClick={signOut} />
           </div>
         ) : (
           <>
             {providers &&
-              Object.values(providers).map((provider) => (
-                <>
-                  <button
-                    onClick={() => {
-                      signIn(provider.id);
-                    }}
-                    className="bg-primary hover:bg-primary-hover px-5 py-2 rounded-2xl text-light text-sm font-semibold transition-colors"
-                  >
-                    Log In
-                  </button>
-                </>
+              Object.values(providers).map((provider, index) => (
+                <Button
+                  onClick={() => {
+                    signIn(provider.id);
+                  }}
+                  text="Log in"
+                  key={`Navbar-provider-${index}`}
+                />
               ))}
           </>
         )}
