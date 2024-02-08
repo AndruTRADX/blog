@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import BentoSection from "@/components/sections/BentoSection";
 import Hero from "@/components/sections/Hero";
 import Categories from "@/components/sections/Categories";
@@ -9,8 +8,7 @@ import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col items-center bg-light-1">
-      <Navbar />
+    <>
       <Hero />
       <Categories />
       <BentoSection />
@@ -18,6 +16,6 @@ export default function Home() {
       <BentoCoursesSection />
       <NewsLetter />
       <Footer />
-    </div>
+    </>
   );
 }
