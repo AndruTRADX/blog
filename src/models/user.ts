@@ -1,21 +1,43 @@
-import { Model, models, model } from "mongoose";
-import { Document, Schema } from "mongoose";
+import mongoose from "mongoose";
+import { Schema } from "mongoose";
 
-interface UserDocument extends Document {
+interface UserDocument {
   name: string;
   username: string;
+  password: string;
   image: string;
   email: string;
   role: "user" | "moderator";
 }
 
-const userSchema = new Schema<UserDocument, {}>({
-  name: { type: String, required: true, trim: true },
-  username: { type: String, required: true, unique: true },
-  image: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  role: { type: String, enum: ["user", "moderator"], default: "user" },
+const userSchema = new Schema({
+  name: {
+    type: String,
+    required: [true, "please write your name"],
+  },
+  username: {
+    type: String,
+    required: [true, "please provide your username"],
+    unique: true,
+  },
+  email: {
+    type: String,
+    required: [true, "please provide a valid your email"],
+    unique: true,
+  },
+  password: {
+    type: String,
+    required: [true, "please provide your password"],
+  },
+  image: {
+    type: String,
+  },
+  role: {
+    type: String,
+    enum: ["user", "moderator"],
+    default: "user",
+  },
 });
 
-const UserModel = models.User || model("User", userSchema);
-export default UserModel as Model<UserDocument, {}>;
+const User = mongoose.models.user || mongoose.model("user", userSchema);
+export default User;

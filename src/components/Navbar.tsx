@@ -1,35 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import {
-  signIn,
-  signOut,
-  useSession,
-  getProviders,
-  LiteralUnion,
-  ClientSafeProvider,
-} from "next-auth/react";
 
 import { BookOpenIcon } from "@heroicons/react/24/outline";
-import { BuiltInProviderType } from "next-auth/providers/index";
 import Button from "./button/Button";
 
 const Navbar = () => {
-  const { data: session } = useSession();
-
-  const [providers, setProviders] = useState<Record<
-    LiteralUnion<BuiltInProviderType, string>,
-    ClientSafeProvider
-  > | null>(null);
-
-  useEffect(() => {
-    (async () => {
-      const res = await getProviders();
-      setProviders(res);
-    })();
-  }, []);
-
   return (
     <nav
       className="flex justify-center bg-light-2/80 backdrop-blur-md sticky border-b border-light-3
@@ -61,25 +37,7 @@ const Navbar = () => {
           </Link>
         </ul>
 
-        {session?.user ? (
-          <div className="flex items-center gap-x-2">
-            <Button text="Add entry" />
-            <Button text="Sign out" outline onClick={signOut} />
-          </div>
-        ) : (
-          <>
-            {providers &&
-              Object.values(providers).map((provider, index) => (
-                <Button
-                  onClick={() => {
-                    signIn(provider.id);
-                  }}
-                  text="Log in"
-                  key={`Navbar-provider-${index}`}
-                />
-              ))}
-          </>
-        )}
+        <Button text="Log in" />
       </div>
     </nav>
   );
