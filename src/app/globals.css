@@ -20,6 +20,10 @@
   @apply w-full min-h-[180px] flex flex-col justify-center gap-2 cursor-pointer hover:border-primary/75 transition-colors
 }
 
+.input-register-form {
+  @apply w-full bg-light text-sm px-2.5 p-2 rounded-lg border border-light-3 placeholder:text-gray-3 text-gray-1 outline-primary shadow shadow-gray-3/50
+}
+
 @layer utilities {
   .css-invert {
     @apply invert-[50%] brightness-200;

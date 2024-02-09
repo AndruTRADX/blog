@@ -4,8 +4,11 @@ import Link from "next/link";
 
 import { BookOpenIcon } from "@heroicons/react/24/outline";
 import Button from "./button/Button";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
+  const router = useRouter();
+
   return (
     <nav
       className="flex justify-center bg-light-2/80 backdrop-blur-md sticky border-b border-light-3
@@ -37,7 +40,7 @@ const Navbar = () => {
           </Link>
         </ul>
 
-        <Button text="Log in" />
+        <Button text="Sign Up" onClick={() => router.push("/signup")} />
       </div>
     </nav>
   );
