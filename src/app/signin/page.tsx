@@ -55,7 +55,7 @@ const SignIn = () => {
   return (
     <main className="main-page-section flex justify-center items-center min-h-screen">
       <form
-        className="bg-light flex flex-col gap-y-4 items-center border border-light-3 py-14 px-10 rounded-xl mb-8 min-w-[320px] max-w-[400px] shadow shadow-gray-1/30"
+        className="bg-light flex flex-col gap-y-4 items-center border border-light-3 py-14 px-10 rounded-xl mb-8 w-full min-w-[300px] max-w-[400px] shadow shadow-gray-1/30"
         onSubmit={handleSubmit}
       >
         <UserCircleIcon className="w-10 h-10 text-primary" />
