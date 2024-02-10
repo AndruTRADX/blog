@@ -41,7 +41,7 @@ const BlogDisplay = () => {
         <div className="col-start-1 col-end-3 row-span-1">
           <EntryCard entry={blogEntriesCategoryFeatured} />
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 col-start-1 col-end-3 items-start">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 col-start-1 col-end-4 items-start">
           {blogEntriesCategory.map((entry, index) => (
             <EntryCard
               entry={entry}

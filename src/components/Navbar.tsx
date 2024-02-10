@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="flex justify-center bg-light-2/80 backdrop-blur-md sticky border-b border-light-3
+      className="flex justify-center bg-light/75 backdrop-blur-md sticky border-b border-light-3
     top-0 w-full py-5 z-50"
     >
       <div className="flex px-6 max-w-screen-lg justify-between w-full">
