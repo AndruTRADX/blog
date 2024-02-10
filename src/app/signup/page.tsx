@@ -7,6 +7,7 @@ import { UserCircleIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
 
 const SignUp = () => {
   const router = useRouter();
@@ -59,52 +60,51 @@ const SignUp = () => {
 
   return (
     <main className="main-page-section flex justify-center items-center min-h-screen">
-      <form
-        className="bg-light flex flex-col gap-y-4 items-center border border-light-3 py-14 px-10 rounded-xl mb-8 max-w-[400px] shadow shadow-gray-1/30"
-        onSubmit={handleSubmit}
-      >
+      <div className="bg-light flex flex-col gap-y-4 items-center border border-light-3 py-14 px-10 rounded-xl mb-8 max-w-[400px] shadow shadow-gray-1/30">
         <UserCircleIcon className="w-10 h-10 text-primary" />
         <h2 className="text-xl font-gray-1 font-medium">Sign Up</h2>
-        <input
-          type="text"
-          placeholder="Name"
-          name="name"
-          value={user.name}
-          onChange={handleInputChange}
-          className="input-register-form mt-4"
-        />
-        <input
-          type="text"
-          placeholder="Username"
-          name="username"
-          value={user.username}
-          onChange={handleInputChange}
-          className="input-register-form"
-        />
-        <input
-          type="email"
-          placeholder="Email"
-          name="email"
-          value={user.email}
-          onChange={handleInputChange}
-          className="input-register-form"
-        />
-        <div className="flex gap-2">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
           <input
-            type="password"
-            placeholder="Password"
-            name="password"
-            value={user.password}
+            type="text"
+            placeholder="Name"
+            name="name"
+            value={user.name}
+            onChange={handleInputChange}
+            className="input-register-form mt-4"
+          />
+          <input
+            type="text"
+            placeholder="Username"
+            name="username"
+            value={user.username}
             onChange={handleInputChange}
             className="input-register-form"
           />
           <input
-            type="password"
-            placeholder="Confirm password"
+            type="email"
+            placeholder="Email"
+            name="email"
+            value={user.email}
+            onChange={handleInputChange}
             className="input-register-form"
           />
-        </div>
-        <Button text="Sign Up" className="w-full mt-4" />
+          <div className="flex gap-2">
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              value={user.password}
+              onChange={handleInputChange}
+              className="input-register-form"
+            />
+            <input
+              type="password"
+              placeholder="Confirm password"
+              className="input-register-form"
+            />
+          </div>
+          <Button text="Sign Up" className="w-full mt-4" />
+        </form>
         <div className="flex gap-2 items-center w-full">
           <hr className="border-light-3 w-full" />
           <p className="text-sm text-gray-3">Or</p>
@@ -113,16 +113,17 @@ const SignUp = () => {
         <Button
           text={
             <div className="flex items-center justify-center gap-2">
-              Sing Up with google
               <Image
                 src="/logos/google.png"
                 alt="Google"
                 width={20}
                 height={20}
               />
+              Sing Up with google
             </div>
           }
           className="w-full"
+          onClick={() => signIn("google")}
           outline
         />
         <p className="text-sm text-gray-2">
@@ -133,7 +134,7 @@ const SignUp = () => {
           .
         </p>
         {error !== "" && <p className="error-span">{error}</p>}
-      </form>
+      </div>
     </main>
   );
 };

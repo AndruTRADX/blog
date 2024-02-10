@@ -2,8 +2,7 @@
 
 import Link from "next/link";
 
-import { BookOpenIcon } from "@heroicons/react/24/outline";
-import Button from "./button/Button";
+import { BookOpenIcon, UserCircleIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
 
 const Navbar = () => {
@@ -40,7 +39,7 @@ const Navbar = () => {
           </Link>
         </ul>
 
-        <Button text="Sign Up" onClick={() => router.push("/signup")} />
+        <UserCircleIcon className="w-7 h-7 text-primary cursor-pointer" onClick={() => router.push("/signup")} />
       </div>
     </nav>
   );

@@ -27,7 +27,6 @@ const userSchema = new Schema({
   },
   password: {
     type: String,
-    required: [true, "please provide your password"],
   },
   image: {
     type: String,

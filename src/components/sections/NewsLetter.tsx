@@ -3,7 +3,7 @@ import { NewspaperIcon } from "@heroicons/react/24/outline";
 const NewsLetter = () => {
   return (
     <main className="main-page-section">
-      <article className="flex justify-between w-full gap-8 items-center bg-light-2 rounded-2xl border border-light-3 px-6 py-8 md:flex-row flex-col">
+      <article className="flex justify-between w-full gap-8 items-center bg-light-1 rounded-2xl border border-light-3 px-6 py-8 md:flex-row flex-col">
         <div className="flex gap-y-2 flex-col">
           <div className="flex items-center gap-2 text-gray-1 font-medium text-xl">
             <h2>Subscribe to our Newsletter</h2>
@@ -19,7 +19,7 @@ const NewsLetter = () => {
         <form className="flex">
           <input
             placeholder="Write your email..."
-            className="px-3 py-2.5 rounded-l-3xl placeholder:text-gray-2 text-gray-1 border border-light-3 bg-light-1 focus:outline-primary w-full"
+            className="px-3 py-2.5 rounded-l-3xl placeholder:text-gray-2 text-gray-1 border border-light-3 bg-light-2 focus:outline-primary w-full"
           />
           <button
             type="submit"
