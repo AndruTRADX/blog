@@ -24,6 +24,10 @@
   @apply w-full bg-light text-sm px-2.5 p-2 rounded-lg border border-light-3 placeholder:text-gray-3 text-gray-1 outline-primary shadow shadow-gray-3/50
 }
 
+.error-span {
+  @apply text-xs text-red-500 font-medium px-2.5 py-1 bg-red-50 rounded-xl border border-red-500
+}
+
 @layer utilities {
   .css-invert {
     @apply invert-[50%] brightness-200;
