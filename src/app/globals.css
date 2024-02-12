@@ -33,6 +33,9 @@
 .li-decoration-navbar {
   @apply underline decoration-2 hover:decoration-primary decoration-transparent cursor-pointer transition hover:text-gray-1 text-gray-1/75
 }
+.span-badge {
+  @apply flex items-center gap-1 border text-xs border-primary bg-primary/10 px-2 py-1 rounded-xl text-primary font-semibold
+}
 .error-span {
   @apply text-xs text-red-500 font-medium px-2.5 py-1 bg-red-50 rounded-xl border border-red-500
 }

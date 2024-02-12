@@ -16,7 +16,7 @@ const HeroBlogPostCard = ({ category, title, date, link }: Props) => {
         {category}
       </p>
       <h3 className="header-md-linked">{title}</h3>
-      <p className="text-xs text-gray-2">{date}</p>
+      <p className="text-xs text-gray-2">{date.replaceAll("-", "/")}</p>
       <hr className="mt-2 border rounded-sm border-primary w-24" />
     </Link>
   );

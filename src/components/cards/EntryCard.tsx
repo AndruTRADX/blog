@@ -16,23 +16,22 @@ const EntryCard = ({ entry }: Props) => {
       <div className="flex justify-between items-center gap-x-8 ">
         <h3 className="header-md-linked">{entry.title}</h3>
         <div className="w-5 h-5 flex">
-          <ArrowUpRightIcon className="text-primary" />
+          <ArrowUpRightIcon className="icon-def" />
         </div>
       </div>
       <p className="flex gap-x-1 items-center">
-        <span className="text-primary text-sm font-medium">{entry.author}</span>
-        <span className="w-1 h-1 bg-primary rounded-full" />
-        <span className="text-primary text-sm font-medium">
+        <span className="text-primary group-hover:text-primary-hover text-sm font-medium">
+          {entry.author}
+        </span>
+        <span className="w-1 h-1 bg-primary group-hover:bg-primary-hover rounded-full" />
+        <span className="text-primary group-hover:text-primary-hover text-sm font-medium">
           {entry.date.replaceAll("-", "/")}
         </span>
       </p>
       <p className="text-gray-2 text-sm">{entry.content}</p>
-      <ul className="flex mt-1 gap-2 items-center flex-wrap text-xs text-gray-1 font-medium">
+      <ul className="flex mt-1 gap-2 items-center flex-wrap ">
         {entry?.topics?.map((topic, index) => (
-          <li
-            className="flex items-center gap-1 border border-primary bg-primary/10 px-2 py-1 rounded-xl text-primary font-semibold"
-            key={`topic-bento-child-${index}`}
-          >
+          <li className="span-badge" key={`topic-bento-child-${index}`}>
             <p>{topic}</p>
           </li>
         ))}
