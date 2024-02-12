@@ -1,3 +1,4 @@
+import { EntryType } from "@/types";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import React from "react";
@@ -10,10 +11,10 @@ const EntryCard = ({ entry }: Props) => {
   return (
     <Link
       href={`/${entry.type === "course" ? "courses" : "blogs"}/${entry.id}`}
-      className="bento-grid-child"
+      className="bento-grid-child group"
     >
-      <div className="flex justify-between items-center gap-x-8 text-gray-1 font-medium text-lg ">
-        {entry.title}
+      <div className="flex justify-between items-center gap-x-8 ">
+        <h3 className="header-md-linked">{entry.title}</h3>
         <div className="w-5 h-5 flex">
           <ArrowUpRightIcon className="text-primary" />
         </div>

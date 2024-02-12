@@ -5,10 +5,10 @@ const NewsLetter = () => {
     <main className="main-page-section">
       <article className="flex justify-between w-full gap-8 items-center bg-light-1 rounded-2xl border border-light-3 px-6 py-8 md:flex-row flex-col">
         <div className="flex gap-y-2 flex-col">
-          <div className="flex items-center gap-2 text-gray-1 font-medium text-xl">
+          <div className="text-icon-title">
             <h2>Subscribe to our Newsletter</h2>
-            <div className="flex justify-center items-center w-6 h-6">
-              <NewspaperIcon className="text-primary" />
+            <div className="flex justify-center items-center">
+              <NewspaperIcon className="icon-def" />
             </div>
           </div>
           <p className="max-w-[420px] text-gray-2 text-sm">

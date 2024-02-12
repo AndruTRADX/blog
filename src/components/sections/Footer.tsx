@@ -3,11 +3,11 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="pt-8 px-6 w-full max-w-screen-lg">
+    <footer className="main-page-section !py-0">
       <div className="flex flex-col gap-y-4 rounded-t-2xl bg-light-1 border border-light-3 px-6 py-8">
         <div className="flex justify-between">
           <div className="flex text-primary items-center font-semibold gap-x-1">
-            <BookOpenIcon className="w-7 h-7 text-primary" />
+            <BookOpenIcon className="icon-def" />
             My blog
           </div>
         </div>

@@ -13,20 +13,20 @@ const CoursesDisplay = () => {
     <section className="main-page-section">
       <article className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 mt-2 items-start">
         <div className="flex flex-col gap-y-4 col-span-2 row-span-1">
-          <h3 className="flex items-center gap-2 text-gray-1 font-medium text-xl">
+          <h3 className="text-icon-title">
             Latest courses from our selection
-            <BookOpenIcon className="w-6 h-6 text-primary" />
+            <BookOpenIcon className="icon-def" />
           </h3>
           <form className="relative">
             <input
-              className="bg-light-1 pl-10 pr-3 py-2.5 rounded-3xl focus:outline-primary w-full border border-light-3 text-gray-1"
+              className="search-input"
               placeholder="What do you want to learn?"
             />
-            <MagnifyingGlassIcon className="w-5 h-5 text-primary absolute left-3 top-3" />
+            <MagnifyingGlassIcon className="icon-search-input" />
           </form>
         </div>
         <div className="hidden col-start-3 col-end-4 row-span-2 md:block">
-          <h3 className="text-gray-1 font-medium text-xl">Featured courses</h3>
+          <h3 className="header-xl">Featured courses</h3>
           <div className="flex flex-col gap-y-6 mt-4 ">
             {courseEntries.map((entry, index) => (
               <HeroBlogPostCard

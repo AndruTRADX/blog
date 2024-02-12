@@ -5,9 +5,9 @@ import React from "react";
 const Categories = () => {
   return (
     <section className="main-page-section flex flex-col gap-4">
-      <h2 className="flex items-center gap-2 text-2xl font-medium text-gray-1">
+      <h2 className="text-icon-tile-md">
         Blog Topics
-        <TagIcon className="w-6 h-6 text-primary" />
+        <TagIcon className="icon-def" />
       </h2>
       <p className="text-gray-2">
         Dive into a sea of topics currently being explored!

@@ -8,24 +8,50 @@
   border-radius: 41% 59% 71% 29% / 40% 30% 70% 60%;
 }
 
+/* General styles */
 .main-page-section {
   @apply py-8 px-6 w-full max-w-screen-lg
 }
 
+/* Common layouts */
+.text-icon-title {
+  @apply flex items-center gap-2 text-gray-1 font-medium text-xl
+}
+.text-icon-tile-md {
+  @apply flex gap-2 items-center text-2xl font-medium text-gray-1 
+}
+
+/* Headers and paragraphs */
+.header-xl {
+  @apply text-gray-1 font-medium text-xl
+}
+.header-md-linked {
+  @apply text-gray-1 group-hover:text-primary-hover transition-colors font-medium
+}
+
+/* Spans, decorations and icons */
 .li-decoration-navbar {
   @apply underline decoration-2 hover:decoration-primary decoration-transparent cursor-pointer transition hover:text-gray-1 text-gray-1/75
 }
-
-.bento-grid-child {
-  @apply w-full min-h-[180px] flex flex-col justify-center gap-2 cursor-pointer hover:border-primary/75 transition-colors
+.error-span {
+  @apply text-xs text-red-500 font-medium px-2.5 py-1 bg-red-50 rounded-xl border border-red-500
+}
+.icon-def {
+  @apply w-6 h-6 text-primary
+}
+.icon-search-input {
+  @apply w-5 h-5 text-primary absolute left-3 top-3
 }
 
+/* General component styles */
+.bento-grid-child {
+  @apply w-full min-h-[180px] flex flex-col justify-center gap-2 cursor-pointer transition-colors
+}
 .input-register-form {
   @apply w-full bg-light text-sm px-2.5 p-2 rounded-lg border border-light-3 placeholder:text-gray-3 text-gray-1 outline-primary shadow shadow-gray-3/50
 }
-
-.error-span {
-  @apply text-xs text-red-500 font-medium px-2.5 py-1 bg-red-50 rounded-xl border border-red-500
+.search-input {
+  @apply bg-light-1 pl-10 pr-3 py-2.5 rounded-2xl focus:outline-primary w-full border border-light-3 text-gray-1
 }
 
 @layer utilities {

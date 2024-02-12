@@ -5,9 +5,9 @@ import React from "react";
 const CoursesTopics = () => {
   return (
     <section className="main-page-section flex flex-col gap-4">
-      <h2 className="flex items-center gap-2 text-2xl font-medium text-gray-1">
+      <h2 className="text-icon-tile-md">
         Course Topics
-        <BookOpenIcon className="w-6 h-6 text-primary" />
+        <BookOpenIcon className="icon-def" />
       </h2>
       <p className="text-gray-2">
         Embark on a journey through cutting-edge course topics that will ignite

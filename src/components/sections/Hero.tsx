@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="flex justify-center w-full items-center flex-col md:flex-[0.5] gap-8">
         <h2 className="text-gray-1 font-medium text-center text-2xl md:mt-20 flex items-center gap-2">
           Explore the hottest topics
-          <FireIcon className="w-7 h-7 text-primary hidden sm:block" />
+          <FireIcon className="icon-def hidden sm:block" />
         </h2>
 
         <HeroBlogPostCard

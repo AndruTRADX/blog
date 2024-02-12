@@ -9,11 +9,17 @@ export async function middleware(req: NextRequest) {
     return NextResponse.redirect(new URL("/", req.nextUrl));
   }
 
-  if (!token && path === "/profile") {
+  if (
+    !token &&
+    (path === "/profile" ||
+      path === "/settings" ||
+      path === "/create-entry" ||
+      path === "/my-entries")
+  ) {
     return NextResponse.redirect(new URL("/signin", req.nextUrl));
   }
 }
 
 export const config = {
-  matcher: ["/signin", "/signup", "/profile"],
+  matcher: ["/signin", "/signup", "/profile", "/settings", "/create-entry", "/my-entries"],
 };
