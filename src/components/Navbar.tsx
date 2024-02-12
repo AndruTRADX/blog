@@ -4,8 +4,9 @@ import Link from "next/link";
 
 import { BookOpenIcon, UserCircleIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
+import { Session } from "next-auth";
 
-const Navbar = () => {
+const Navbar = ({ session }: { session: Session | null }) => {
   const router = useRouter();
 
   return (
@@ -39,7 +40,16 @@ const Navbar = () => {
           </Link>
         </ul>
 
-        <UserCircleIcon className="w-7 h-7 text-primary cursor-pointer" onClick={() => router.push("/signup")} />
+        <UserCircleIcon
+          className="w-7 h-7 text-primary cursor-pointer"
+          onClick={() => {
+            if (!session) {
+              router.push("/signup");
+            } else {
+              router.push("/profile");
+            }
+          }}
+        />
       </div>
     </nav>
   );

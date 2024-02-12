@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import BlogsDisplay from "@/components/blogs/BlogsDisplay";
 
 const page = () => {

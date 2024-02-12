@@ -3,21 +3,17 @@ import { NextRequest, NextResponse } from "next/server";
 
 export async function middleware(req: NextRequest) {
   const path = req.nextUrl.pathname;
-  const token = await getToken({
-    req: req,
-    secret: process.env.NEXTAUTH_SECRET,
-  });
+  const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
 
-  const publicPaths = path === "/" || path === "/signup";
+  if (token && (path === "/signin" || path === "/signup")) {
+    return NextResponse.redirect(new URL("/", req.nextUrl));
+  }
 
-  // if (publicPaths && token) {
-  //   return NextResponse.redirect(new URL("/", req.nextUrl));
-  // }
-  // if (!publicPaths && !token) {
-  //   return NextResponse.redirect(new URL("/", req.nextUrl));
-  // }
+  if (!token && path === "/profile") {
+    return NextResponse.redirect(new URL("/signin", req.nextUrl));
+  }
 }
 
 export const config = {
-  matcher: ["/", "/signup",],
+  matcher: ["/signin", "/signup", "/profile"],
 };

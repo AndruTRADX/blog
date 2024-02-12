@@ -95,6 +95,7 @@ const SignIn = () => {
             </div>
           }
           className="w-full"
+          onClick={() => signIn("google")}
           outline
         />
         <p className="text-sm text-gray-2">
