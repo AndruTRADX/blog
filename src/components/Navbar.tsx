@@ -2,9 +2,11 @@
 
 import Link from "next/link";
 
-import { BookOpenIcon, UserCircleIcon } from "@heroicons/react/24/outline";
+import { BookOpenIcon } from "@heroicons/react/24/outline";
 import { useRouter } from "next/navigation";
 import { Session } from "next-auth";
+import { DropdownUserSettings } from "./buttons/DropDownUser";
+import Button from "./buttons/Button";
 
 const Navbar = ({ session }: { session: Session | null }) => {
   const router = useRouter();
@@ -40,16 +42,14 @@ const Navbar = ({ session }: { session: Session | null }) => {
           </Link>
         </ul>
 
-        <UserCircleIcon
-          className="w-7 h-7 text-primary cursor-pointer"
-          onClick={() => {
-            if (!session) {
-              router.push("/signup");
-            } else {
-              router.push("/profile");
-            }
-          }}
-        />
+        {session ? (
+          <DropdownUserSettings userImage={session?.user?.image} />
+        ) : (
+          <div className="flex items-center gap-2">
+            <Button text="Sign In" xs onClick={() => router.push("/signin")} />
+            <Button text="Sign Up" xs outline onClick={() => router.push("/signup")} />
+          </div>
+        )}
       </div>
     </nav>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "@/components/button/Button";
+import Button from "@/components/buttons/Button";
 import { UserCircleIcon } from "@heroicons/react/24/outline";
 import { signIn } from "next-auth/react";
 import Image from "next/image";
