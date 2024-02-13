@@ -3,14 +3,16 @@ import Link from "next/link";
 interface Props {
   category: string;
   title: string;
-  date: string
+  date: string;
   link: string;
 }
 
 const HeroBlogPostCard = ({ category, title, date, link }: Props) => {
-
   return (
-    <Link href={link} className="flex flex-col max-w-[420px] group cursor-pointer">
+    <Link
+      href={link}
+      className="flex flex-col max-w-[420px] group cursor-pointer"
+    >
       <p className="text-sm text-gray-2 flex items-center gap-1.5">
         <span className="w-2 h-2 rounded-full bg-primary" />
         {category}

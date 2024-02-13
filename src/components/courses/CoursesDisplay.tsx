@@ -40,9 +40,7 @@ const CoursesDisplay = () => {
           </div>
         </div>
         <div className="col-start-1 col-end-3 row-span-1">
-          <EntryCard
-            entry={courseEntriesCategoryFeatured}
-          />
+          <EntryCard entry={courseEntriesCategoryFeatured} />
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 col-start-1 col-end-4 items-start">
           {courseEntriesCategory.map((entry, index) => (

@@ -47,7 +47,12 @@ const Navbar = ({ session }: { session: Session | null }) => {
         ) : (
           <div className="flex items-center gap-2">
             <Button text="Sign In" xs onClick={() => router.push("/signin")} />
-            <Button text="Sign Up" xs outline onClick={() => router.push("/signup")} />
+            <Button
+              text="Sign Up"
+              xs
+              outline
+              onClick={() => router.push("/signup")}
+            />
           </div>
         )}
       </div>
