@@ -50,16 +50,6 @@ export function DropdownUserSettings({
           </DropdownMenuItem>
         </DropdownMenuGroup>
 
-        <DropdownMenuSeparator className="block sm:hidden" />
-        <DropdownMenuGroup className="block sm:hidden">
-          <DropdownMenuItem onClick={() => router.push("/blogs")}>
-            Blogs
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => router.push("/courses")}>
-            Courses
-          </DropdownMenuItem>
-        </DropdownMenuGroup>
-
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem onClick={() => router.push("/create-entry")}>
