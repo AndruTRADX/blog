@@ -7,6 +7,7 @@ import {
   courseEntriesCategory,
   courseEntriesCategoryFeatured,
 } from "@/constants/coursePage";
+import CoursesTopics from "../sections/CoursesTopics";
 
 const CoursesDisplay = () => {
   return (
@@ -24,6 +25,7 @@ const CoursesDisplay = () => {
             />
             <MagnifyingGlassIcon className="icon-search-input" />
           </form>
+          <CoursesTopics />
         </div>
         <div className="hidden col-start-3 col-end-4 row-span-2 md:block">
           <h3 className="header-xl">Featured courses</h3>

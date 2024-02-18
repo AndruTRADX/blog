@@ -6,6 +6,7 @@ import {
   blogEntriesCategory,
   blogEntriesCategoryFeatured,
 } from "@/constants/categoryPage";
+import Categories from "../sections/Categories";
 
 const BlogDisplay = () => {
   return (
@@ -23,6 +24,7 @@ const BlogDisplay = () => {
             />
             <MagnifyingGlassIcon className="icon-search-input" />
           </form>
+          <Categories /> 
         </div>
         <div className="hidden md:block col-start-3 col-end-4 row-span-2">
           <h3 className="header-xl">Featured post</h3>
