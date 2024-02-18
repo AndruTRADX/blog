@@ -12,7 +12,7 @@ import CoursesTopics from "../sections/CoursesTopics";
 const CoursesDisplay = () => {
   return (
     <section className="main-page-section">
-      <article className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-12 mt-2 items-start">
+      <article className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:gap-x-8 gap-y-12 mt-2 items-start">
         <div className="flex flex-col gap-y-4 col-span-2 row-span-1">
           <h3 className="text-icon-title">
             Latest courses from our selection

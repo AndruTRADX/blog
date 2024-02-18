@@ -17,7 +17,7 @@ const BentoCoursesSection = () => {
         </h2>
         <Link
           href="/courses"
-          className="text-primary flex items-center gap-2 text-sm mb-8 hover:text-primary-hover"
+          className="text-primary flex items-center gap-1 text-sm mb-8 hover:text-primary-hover"
         >
           See more <ArrowUpRightIcon className="icon-text-primary w-3 h-3" />
         </Link>

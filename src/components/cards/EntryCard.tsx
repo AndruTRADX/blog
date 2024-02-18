@@ -1,7 +1,6 @@
 import { EntryType } from "@/types";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import React from "react";
 
 interface Props {
   entry: EntryType;
