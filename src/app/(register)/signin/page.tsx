@@ -57,7 +57,7 @@ const SignIn = () => {
     <main className="main-page-section flex justify-center items-center min-h-screen">
       <div className="bg-light flex flex-col gap-y-4 items-center border border-light-3 py-14 px-10 rounded-xl mb-8 w-full min-w-[300px] max-w-[400px] shadow shadow-gray-1/30">
         <UserCircleIcon className="w-10 h-10 text-primary" />
-        <h2 className="text-xl font-gray-1 font-medium">Sign In</h2>
+        <h2 className="text-xl text-gray-1 font-medium">Sign In</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 w-full">
           <input
             type="email"

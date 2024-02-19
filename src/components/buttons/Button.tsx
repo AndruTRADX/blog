@@ -8,7 +8,7 @@ interface Props {
   xs?: boolean;
 }
 
-const Button = ({ text, onClick, outline, className, xs }: Props) => {
+const MyButton = ({ text, onClick, outline, className, xs }: Props) => {
   return (
     <button
       onClick={onClick}
@@ -26,4 +26,4 @@ const Button = ({ text, onClick, outline, className, xs }: Props) => {
   );
 };
 
-export default Button;
+export default MyButton;
