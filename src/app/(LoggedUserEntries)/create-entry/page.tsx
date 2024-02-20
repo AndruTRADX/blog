@@ -7,6 +7,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 
 import MyButton from "@/components/buttons/Button";
 import SelectTopic from "@/components/buttons/SelectTopic";
+import Tiptap from "@/components/TipTap";
 
 const frameworks = [
   {
@@ -99,6 +100,7 @@ const Page = () => {
             />
           </div>
         </div>
+        <Tiptap />
       </div>
     </main>
   );

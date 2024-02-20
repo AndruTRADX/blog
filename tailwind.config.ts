@@ -20,6 +20,8 @@ const config = {
     extend: {
       colors: {
         primary: "#007AFF",
+        "primary-foreground":"#ffffffff",
+        "secondary-foreground":"#222222ff",
         "primary-hover":"#0066EB",
         "primary-dark": "#0a84ffff",
         dark: "#000000ff",
