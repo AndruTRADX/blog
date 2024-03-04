@@ -4,6 +4,7 @@ import BentoCoursesSection from "@/components/sections/BentoCoursesSection";
 import NewsLetter from "@/components/sections/NewsLetter";
 import Footer from "@/components/sections/Footer";
 
+// Hi
 export default function Home() {
   return (
     <>
